@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_16_132358) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_18_123909) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,14 +18,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_16_132358) do
     t.string "name"
     t.integer "amount"
     t.bigint "user_id", null: false
+    t.bigint "group_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_entities_on_group_id"
     t.index ["user_id"], name: "index_entities_on_user_id"
   end
 
   create_table "entity_groups", force: :cascade do |t|
-    t.bigint "group_id", null: false
     t.bigint "entity_id", null: false
+    t.bigint "group_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["entity_id"], name: "index_entity_groups_on_entity_id"
@@ -43,6 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_16_132358) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
@@ -50,11 +53,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_16_132358) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "role", default: "default", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "entities", "groups"
   add_foreign_key "entities", "users"
   add_foreign_key "entity_groups", "entities"
   add_foreign_key "entity_groups", "groups"

@@ -1,4 +1,4 @@
-class EntityController < ApplicationController
+class EntitiesController < ApplicationController
     def new
         @group = Group.find(params[:group_id])
         @money_track = Entity.new
@@ -29,6 +29,6 @@ class EntityController < ApplicationController
       private
 
       def moneytrack_params
-        params.require(:entity).permit(:name, :amount, :user_id)
+        params.require(:entit).permit(:name, :amount, :user_id, :group_id)
       end
 end

@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
 
 
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # unauthenticated do
@@ -22,7 +24,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:home]
   resources :groups, only: [:index, :show, :new, :create, :destroy] do
-    resources :entity, only: [:index, :new, :show, :create, :destroy]
+    resources :entities, only: [:new, :show, :create]
   end
   # Defines the root path route ("/")
   # root "articles#index"
