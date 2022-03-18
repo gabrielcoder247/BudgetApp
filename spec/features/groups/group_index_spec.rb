@@ -8,5 +8,4 @@ RSpec.feature 'Group Index', type: :feature do
     fill_in 'email', with: 'hello@example.com'
     fill_in 'pass', with: 'password'
   end
-
 end
