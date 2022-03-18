@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'test_helper'
 
 RSpec.describe Group, type: :model do
   let(:user) { User.create(name: 'Gabriel', email: 'example@mail.com', password: 'password') }
