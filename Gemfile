@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
+git_source(:github) {"https://github.com/#{repo}.git" }
 
 ruby '3.0.1'
 
@@ -13,7 +13,7 @@ gem 'devise'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
@@ -22,7 +22,7 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
+gem 'importmap-rails'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
