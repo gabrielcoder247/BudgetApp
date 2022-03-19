@@ -7,6 +7,7 @@ class EntitiesController < ApplicationController
   def create
     @group = Group.find(params[:group_id])
     @money_track = @group.entities.create(moneytrack_params)
+    @money_track .user_id = current_user.id
     if @money_track.save
       flash[:notice] = 'Transaction created successfully.'
       redirect_to group_path(@group)
@@ -29,6 +30,6 @@ class EntitiesController < ApplicationController
   private
 
   def moneytrack_params
-    params.require(:entit).permit(:name, :amount, :user_id, :group_id)
+    params.require(:entity).permit(:name, :amount, :user_id, :group_id, :icon)
   end
 end
