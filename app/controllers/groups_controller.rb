@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @group_entities = @group.entities.all
+    @entities = Entity.where(group_id: @group)
   end
 
   def new
