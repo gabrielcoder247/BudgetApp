@@ -7,8 +7,9 @@ class EntitiesController < ApplicationController
 
   def create
     @group = Group.find(params[:group_id])
+    # rubocop:disable Layout/LineLength
     @money_track = Entity.new(name: moneytrack_params[:name], amount: moneytrack_params[:amount], user_id: current_user.id, group_id: params[:group_id])
-    # @money_track .user_id = current_user.id
+    # rubocop:enable Layout/LineLength
     if @money_track.save
       flash[:notice] = 'Transaction created successfully.'
       redirect_to group_path(@group)
