@@ -66,6 +66,8 @@ To start recipe app you need to first `signup`
 - GitHub: [@codePriest](https://github.com/gabrielcoder247)
 - LinkedIn: [@codepriest](https://www.linkedin.com/in/gabriel-nwachukwu-209613173/)
 
+  Credit of the design goes to [Creative Commons license.](https://www.behance.net/gregoirevella) The Original design idea by [Gregoire Vella on Behance.](https://www.behance.net/gregoirevella)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
