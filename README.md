@@ -10,9 +10,9 @@ The Budget app is a mobile application, that helps you where to manage your budg
 - Bootstrap
 
 
-##video Demo
+## video Demo
 
-[![Demo Video link](https://www.loom.com/share/5b5242aeb9604b639d858be42e0894fb?sharedAppSource=personal_library)]
+[Demo Video link](https://www.loom.com/share/5b5242aeb9604b639d858be42e0894fb?sharedAppSource=personal_library)
 ## Getting Started
 
 **To get a local copy up and running follow these simple example steps:**
