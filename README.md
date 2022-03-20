@@ -27,7 +27,7 @@ The Budget app is a mobile application, that helps you where to manage your budg
 - Make sure you have Ruby on Rails set up properly on your computer
 
 ``` sh
-  git git@github.com:sja-thedude/Recipe-App.git
+  git git@github.com:gabrielcoder247/BudgetApp.git
 ```
 
 ### Install
