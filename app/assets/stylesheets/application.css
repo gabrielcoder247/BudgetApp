@@ -78,7 +78,12 @@ button a,
 }
 
 .m-5 {
-  width: 50%;
+  width: 90%;
+}
+
+.btn-lg {
+  width: 90%;
+  margin-left: 12px;
 }
 
 .form-container {
